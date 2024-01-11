@@ -1,0 +1,33 @@
+import contanierQueries from '@tailwindcss/container-queries'
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./*.html'],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter Variable', 'sans-serif'],
+        serif: ['Cardo', 'serif']
+      },
+      fontSize: {
+        '5xl': '2.75rem',
+        '9xl': ['7.5rem', '1']
+      },
+      spacing: {
+        '14': '3.5rem'
+      },
+      colors: {
+        neutral: {
+          '750': '#2d2d2d'
+        }
+      },
+      letterSpacing: {
+        widest: '0.3em'
+      }
+    }
+  },
+  plugins: [
+    contanierQueries
+  ]
+}
+
