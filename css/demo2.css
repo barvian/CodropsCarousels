@@ -31,6 +31,10 @@
         @media screen(lg) {
             animation-name: text-lg;
         }
+
+        @media screen(3xl) {
+            animation-name: text-3xl;
+        }
     }
 
     @keyframes bottle {
@@ -122,6 +126,21 @@
         60%, 100% {
             opacity: 0;
             transform: translateX(-50%);
+        }
+    }
+
+    @keyframes text-3xl {
+        0%, 25% {
+            opacity: 0;
+            transform: translateX(calc(25cqw + 50%));
+        }
+        50% {
+            opacity: 1;
+            transform: none;
+        }
+        75%, 100% {
+            opacity: 0;
+            transform: translateX(calc(-50% - 25cqw));
         }
     }
 }

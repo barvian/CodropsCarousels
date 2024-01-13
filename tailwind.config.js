@@ -9,6 +9,9 @@ export default {
         sans: ['Inter Variable', 'sans-serif'],
         serif: ['Cardo', 'serif']
       },
+      screens: {
+        '3xl': '1800px'
+      },
       fontSize: {
         '5xl': '2.75rem',
         '9xl': ['7.5rem', '1']
