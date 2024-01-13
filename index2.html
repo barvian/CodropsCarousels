@@ -6,105 +6,15 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="Codrops" />
-	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/demo2.css" />
 	<link rel="shortcut icon" href="favicon.ico">
 	<script>
 		document.documentElement.setAttribute('data-js', '')
 		window.addEventListener('load', () => document.documentElement.removeAttribute('data-loading'))
 	</script>
-	<style>
-		.animate-bottle {
-			animation: bottle auto linear both;
-		}
-
-		.animate-bg {
-			animation: bg auto linear both;
-		}
-
-		.animate-page {
-			animation: page auto linear both;
-		}
-
-		.animate-fade {
-			animation: fade auto linear both;
-		}
-
-		.animate-progress {
-			animation: progress auto linear both;
-		}
-
-		.animate-text {
-			animation: text auto linear both;
-		}
-
-		@keyframes bottle {
-			0% {
-				transform: scale(0.63)
-			}
-			50% {
-				transform: scale(0.8) translateY(4rem) translateX(calc(1/.8*2.5cqw))
-			}
-			100% {
-				transform: scale(1) translateY(4rem) translateX(-30%)
-			}
-		}
-
-		@keyframes bg {
-			0% {
-				opacity: 0;
-				transform: scale(1.2)
-			}
-			50% {
-				opacity: 1;
-				transform: none
-			}
-			100% {
-				transform: scale(0.8)
-			}
-		}
-
-		@keyframes page {
-			0%, 100% {
-				opacity: 0.5
-			}
-			58% {
-				opacity: 1;
-			}
-		}
-
-		@keyframes progress {
-			100% {
-				transform: translateY(calc((var(--slides) - 1) * -100%));
-			}
-		}
-
-		@keyframes fade {
-			0% {
-				opacity: 0
-			}
-			50% {
-				opacity: 1
-			}
-		}
-
-		@keyframes text {
-			0%, 25% {
-				opacity: 0;
-				transform: translateY(50%);
-			}
-			50% {
-				opacity: 1;
-				transform: none;
-			}
-			75%, 100% {
-				opacity: 0;
-				transform: translateY(50%);
-			}
-		}
-	</style>
 	<div class="@container min-h-screen relative isolate loadable flex flex-col pointer-events-none overflow-clip" style="timeline-scope: --scroller, --slide-1, --slide-2, --slide-3; --slides: 3;">
-		<img class="absolute bg-[#EDC089] -z-20 inset-0 h-full w-full animate-fade" style="animation-timeline: --slide-2" />
-		<img class="absolute bg-[#B6D6C9] -z-20 inset-0 h-full w-full animate-fade" style="animation-timeline: --slide-3" />
+		<div class="absolute bg-[#EDC089] -z-20 inset-0 h-full w-full animate-fade" style="animation-timeline: --slide-2"></div>
+		<div class="absolute bg-[#B6D6C9] -z-20 inset-0 h-full w-full animate-fade" style="animation-timeline: --slide-3"></div>
 		<header class="frame mx-7 relative z-50 flex max-lg:flex-col lg:items-center justify-between py-6 border-b gap-2 border-black/20 pointer-events-auto">
 			<div class="whitespace-nowrap">
 				<h1 class="font-bold inline align-middle">CSS-Only Carousel</h1>
@@ -122,22 +32,24 @@
 			<a href="https://tympanus.net/codrops/?p=" class="lg:hidden">Previous demo</a>
 			<div id="cdawrap" class="cdawrap"><a href="https://www.ionos.com/hosting/deploy-now?itc=NGZ8GOUU-DWGP1F-HIU3B32&amp;ac=OM.US.USt64K430429T7073a&amp;utm_source=BSA23&amp;utm_medium=display&amp;utm_campaign=PTN-US-MIX-OMAX-EXT-AWR---&amp;photo=&amp;utm_content=BSACodropsSiteSponsor" class="cda-sponsor-link" target="_blank" rel="nofollow noopener">IONOS: Deploy static sites and PHP apps via GitHub with Deploy Now.</a></div>
 		</header>
-		<div class="h-screen max-h-[1000px] flex-1 py-14 px-7 relative flex flex-col">
-			<div class="rounded-full -z-10 absolute top-14 left-1/2 translate-x-[calc(2.5cqw-50%)] h-3/4 aspect-[3/4] overflow-clip">
-				<img class="object-cover animate-bg -left-[25%] -top-[25%] absolute size-[150%] max-w-none" style="animation-timeline: --slide-1" src="img/2/beach.jpg" role="presentation" alt="" />
-				<img class="object-cover object-left-top animate-bg -left-[25%] -top-[25%] absolute size-[150%] max-w-none" style="animation-timeline: --slide-2" src="img/2/savanna.jpg" role="presentation" alt="" />
-				<img class="object-cover animate-bg object-top -left-[25%] -top-[25%] absolute size-[150%] max-w-none" style="animation-timeline: --slide-3" src="img/2/glacier.jpg" role="presentation" alt="" />
-			</div>
-			<div class="absolute z-10 inset-0 h-full w-full overflow-x-auto snap-mandatory scroll-smooth snap-x scrollbar-hidden pointer-events-auto" style="scroll-timeline: --scroller x;">
-				<div class="grid grid-flow-col auto-cols-[50cqw] px-[25cqw] h-full w-fit">
-					<div class="snap-center overflow-hidden flex items-center justify-center" style="view-timeline: --slide-1 x; view-timeline-inset: 25cqw">
-						<img class="animate-bottle h-full object-contain" style="animation-timeline: --slide-1;" src="img/2/abyss.png" alt="White water bottle" />
-					</div>
-					<div class="snap-center overflow-hidden flex items-center justify-center" style="view-timeline: --slide-2 x; view-timeline-inset: 25cqw">
-						<img class="animate-bottle h-full object-contain" style="animation-timeline: --slide-2;" src="img/2/black.png" alt="White water bottle" />
-					</div>
-					<div class="snap-center overflow-hidden flex items-center justify-center" style="view-timeline: --slide-3 x; view-timeline-inset: 25cqw">
-						<img class="animate-bottle h-full object-contain" style="animation-timeline: --slide-3;" src="img/2/white.png" alt="White water bottle" />
+		<div class="lg:h-screen lg:max-h-[1000px] flex-1 py-14 lg:pb-9 relative flex flex-col">
+			<div class="max-lg:relative lg:contents">
+				<div class="rounded-full -z-10 absolute top-0 lg:top-14 left-1/2 -translate-x-1/2 h-3/4 aspect-[3/4] overflow-clip">
+					<img class="object-cover animate-bg -left-[25%] -top-[25%] absolute size-[150%] max-w-none" style="animation-timeline: --slide-1" src="img/2/beach.jpg" role="presentation" alt="" />
+					<img class="object-cover object-left-top animate-bg -left-[25%] -top-[25%] absolute size-[150%] max-w-none" style="animation-timeline: --slide-2" src="img/2/savanna.jpg" role="presentation" alt="" />
+					<img class="object-cover animate-bg object-top -left-[25%] -top-[25%] absolute size-[150%] max-w-none" style="animation-timeline: --slide-3" src="img/2/glacier.jpg" role="presentation" alt="" />
+				</div>
+				<div class="lg:absolute -z-10 inset-0 h-full w-full overflow-x-auto snap-mandatory scroll-smooth snap-x scrollbar-hidden pointer-events-auto" style="scroll-timeline: --scroller x;">
+					<div class="grid grid-flow-col auto-cols-[50cqw] px-[25cqw] lg:h-full w-fit">
+						<div class="snap-center overflow-hidden max-lg:pb-[3rem] flex items-center justify-center" style="view-timeline: --slide-1 x; view-timeline-inset: 25cqw">
+							<img class="animate-bottle lg:h-4/5 object-contain" style="animation-timeline: --slide-1;" src="img/2/abyss.png" alt="White water bottle" />
+						</div>
+						<div class="snap-center overflow-hidden max-lg:pb-[3rem] flex items-center justify-center" style="view-timeline: --slide-2 x; view-timeline-inset: 25cqw">
+							<img class="animate-bottle lg:h-4/5 object-contain" style="animation-timeline: --slide-2;" src="img/2/black.png" alt="White water bottle" />
+						</div>
+						<div class="snap-center overflow-hidden max-lg:pb-[3rem] flex items-center justify-center" style="view-timeline: --slide-3 x; view-timeline-inset: 25cqw">
+							<img class="animate-bottle lg:h-4/5 object-contain" style="animation-timeline: --slide-3;" src="img/2/white.png" alt="White water bottle" />
+						</div>
 					</div>
 				</div>
 			</div>
@@ -153,35 +65,45 @@
 				/
 				03
 			</span>
-			<h1 class="uppercase font-semibold tracking-widest mb-6">Closca Bottle Wave</h1>
-			<!-- Slides -->
-			<div class="overlap w-[17rem]">
-				<div class="">
-					<h2 class="animate-text font-serif text-9xl" style="animation-timeline: --slide-1;">Abyss</h2>
-					<p class="animate-text font-serif text-5xl mt-2" style="animation-timeline: --slide-1;">$39.90</p>
-				</div>
-				<div class="">
-					<h2 class="animate-text font-serif text-9xl" style="animation-timeline: --slide-2;">Black</h2>
-					<p class="animate-text font-serif text-5xl mt-2" style="animation-timeline: --slide-2;">$39.90</p>
-				</div>
-				<div class="">
-					<h2 class="animate-text font-serif text-9xl" style="animation-timeline: --slide-3;">White</h2>
-					<p class="animate-text font-serif text-5xl mt-2" style="animation-timeline: --slide-3;">$39.90</p>
-				</div>
-			</div>
-			<!-- Captions -->
-			<div class="overlap items-end w-[26rem] mt-auto">
-				<div>
-					<p class="font-serif text-3xl italic animate-text mb-2" style="animation-timeline: --slide-1;">By 2050, there could be more plastic in our oceans than fish.</p>
-					<p class="animate-text" style="animation-timeline: --slide-1;">Plastic pollution injures more than 100,000 marine animals every year. It takes around 450 years for one plastic bottle to decompose.</p>
-				</div>
-				<div>
-					<p class="font-serif text-3xl italic animate-text mb-2" style="animation-timeline: --slide-2;">The area affected by desertification is approx 11x India's size.</p>
-					<p class="animate-text" style="animation-timeline: --slide-2;">Every minute, over a million plastic bottles are manufactured, and only 9% of them will have a second life.</p>
-				</div>
-				<div>
-					<p class="font-serif text-3xl italic animate-text mb-2" style="animation-timeline: --slide-3;">By 2050, there could be more plastic in our oceans than fish.</p>
-					<p class="animate-text" style="animation-timeline: --slide-3;">Every time you fill your bottle, you save 82.8 grams of CO2 and 12 grams of plastic.</p>
+			<div class="px-7 max-lg:mt-10 flex flex-col items-center lg:items-start flex-1 max-lg:text-center lg:w-[29rem]">
+				<h2 class="uppercase font-semibold tracking-widest mb-6 whitespace-nowrap">Closca Bottle Wave</h1>
+				<div class="overlap flex-1 max-lg:items-start max-lg:justify-center max-lg:max-w-[36rem] lg:max-xl:max-w-[25cqw]">
+					<div class="flex flex-col items-center lg:items-start">
+						<h3 class="animate-text font-serif text-7xl lg:text-9xl w-fit" style="animation-timeline: --slide-1;">Abyss</h3>
+						<p class="animate-text font-serif text-4xl lg:text-5xl mt-2 mb-auto w-3/4" style="animation-timeline: --slide-1;">$39.90</p>
+						<p class="font-serif text-3xl italic animate-text my-4" style="animation-timeline: --slide-1;">By 2050, there could be more plastic in our oceans than fish.</p>
+						<p class="animate-text text-pr" style="animation-timeline: --slide-1;">Plastic pollution injures more than 100,000 marine animals every year. It takes around 450 years for one plastic bottle to decompose.</p>
+						<a href="https://closca.com" class="animate-text group pointer-events-auto inline-flex gap-4 items-center !text-current mt-6" style="animation-timeline: --slide-1;">
+							<span class="font-semibold">Shop Now</span>
+							<svg class="w-6 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5303 0.469727L23.5607 5.50006L18.5303 10.5304L17.4697 9.46973L20.6893 6.25006H0.5V4.75006H20.6893L17.4697 1.53039L18.5303 0.469727Z" fill="currentColor"/>
+							</svg>																				
+						</a>
+					</div>
+					<div class="flex flex-col items-center lg:items-start">
+						<h3 class="animate-text font-serif text-7xl lg:text-9xl w-fit" style="animation-timeline: --slide-2;">Black</h3>
+						<p class="animate-text font-serif text-4xl lg:text-5xl mt-2 mb-auto w-3/4" style="animation-timeline: --slide-2;">$39.90</p>
+						<p class="font-serif text-3xl italic animate-text my-4" style="animation-timeline: --slide-2;">The area affected by desertification is approx 11x India's size.</p>
+						<p class="animate-text text-pretty" style="animation-timeline: --slide-2;">Every minute, over a million plastic bottles are manufactured, and only 9% of them will have a second life.</p>
+						<a href="https://closca.com" class="animate-text group pointer-events-auto inline-flex gap-4 items-center !text-current mt-6" style="animation-timeline: --slide-2;">
+							<span class="font-semibold">Shop Now</span>
+							<svg class="w-6 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5303 0.469727L23.5607 5.50006L18.5303 10.5304L17.4697 9.46973L20.6893 6.25006H0.5V4.75006H20.6893L17.4697 1.53039L18.5303 0.469727Z" fill="currentColor"/>
+							</svg>																			
+						</a>
+					</div>
+					<div class="flex flex-col items-center lg:items-start">
+						<h3 class="animate-text font-serif text-7xl lg:text-9xl w-fit" style="animation-timeline: --slide-3;">White</h3>
+						<p class="animate-text font-serif text-4xl lg:text-5xl mt-2 mb-auto w-3/4" style="animation-timeline: --slide-3;">$39.90</p>
+						<p class="font-serif text-3xl italic animate-text my-4" style="animation-timeline: --slide-3;">By 2050, there could be more plastic in our oceans than fish.</p>
+						<p class="animate-text text-pretty" style="animation-timeline: --slide-3;">Every time you fill your bottle, you save 82.8 grams of CO2 and 12 grams of plastic.</p>
+						<a href="https://closca.com" class="animate-text group pointer-events-auto inline-flex gap-4 items-center !text-current mt-6" style="animation-timeline: --slide-3;">
+							<span class="font-semibold">Shop Now</span>
+							<svg class="w-6 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5303 0.469727L23.5607 5.50006L18.5303 10.5304L17.4697 9.46973L20.6893 6.25006H0.5V4.75006H20.6893L17.4697 1.53039L18.5303 0.469727Z" fill="currentColor"/>
+							</svg>																				
+						</a>
+					</div>
 				</div>
 			</div>
 			<a href="" class="max-lg:hidden absolute z-50 bottom-7 right-7 pointer-events-auto">Previous Demo</a>

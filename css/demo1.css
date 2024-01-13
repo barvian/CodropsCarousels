@@ -1,0 +1,89 @@
+@import "./shared.css";
+
+@layer utilities {
+    .animate-grow {
+        animation: grow auto linear both;
+    }
+
+    .animate-page {
+        animation: page auto linear both;
+    }
+
+    .animate-progress {
+        animation: progress auto linear both;
+    }
+
+    .animate-text {
+        animation: text auto linear both;
+    }
+
+    .animate-text-up {
+        animation: text-up auto linear both;
+    }
+
+    @keyframes grow {
+        /* 0% {
+            clip-path: inset(0 20% round 15cqw);
+            transform: translateX(calc(100cqw - 50%)) scale(0);
+        }
+        18% {
+            clip-path: inset(0 20% round 15cqw);
+            transform: translateX(calc(100cqw - 50%)) scale(0.4);
+        } */
+        0% {
+            clip-path: inset(0 25% round 35cqmin);
+            transform: translateX(70%) scale(0.15);
+        }
+        58.75% {
+            clip-path: inset(0 round 0);
+            transform: none;
+        }
+        100% {
+            transform: scale(1.5) translateX(-16%);
+            /* display: none; */
+        }
+    }
+
+    @keyframes page {
+        0%, 100% {
+            opacity: 0.5
+        }
+        58% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes progress {
+        from {
+            transform: scaleX(calc(1/(var(--slides) + 0.3)));
+        }
+    }
+
+    @keyframes text {
+        0%, 25% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+            transform: none;
+        }
+        75%, 100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes text-up {
+        0%, 25% {
+            opacity: 0.5;
+            transform: translateY(105%);
+        }
+        50% {
+            opacity: 1;
+            transform: none;
+        }
+        75%, 100% {
+            opacity: 0.5;
+            transform: translateY(-105%);
+        }
+    }
+}

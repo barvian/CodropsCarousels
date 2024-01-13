@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en" data-loading class="[--color-bg:#E9DFCF] text-neutral-750 antialiased">
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS-Only Carousel | Codrops</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="Codrops" />
+	<link rel="stylesheet" href="css/shared.css" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<script>
+		document.documentElement.setAttribute('data-js', '')
+		window.addEventListener('load', () => document.documentElement.removeAttribute('data-loading'))
+	</script>
+	<style>
+		.animate-bottle {
+			animation: bottle auto linear both;
+		}
+
+		.animate-bg {
+			animation: bg auto linear both;
+		}
+
+		.animate-page {
+			animation: page auto linear both;
+		}
+
+		.animate-fade {
+			animation: fade auto linear both;
+		}
+
+		.animate-progress {
+			animation: progress auto linear both;
+		}
+
+		.animate-text {
+			animation: text auto linear both;
+		}
+
+		.animate-wipe {
+			animation: wipe auto linear both;
+		}
+
+		@keyframes bottle {
+			0% {
+				transform: scale(0.63)
+			}
+			50% {
+				transform: scale(0.8) translateY(4rem);
+			}
+			100% {
+				transform: translateY(6rem) translateX(-25%);
+			}
+		}
+
+		@keyframes bg {
+			0% {
+				opacity: 0;
+				transform: scale(1.2)
+			}
+			50% {
+				opacity: 1;
+				transform: none
+			}
+			100% {
+				transform: scale(0.8)
+			}
+		}
+
+		@keyframes page {
+			0%, 100% {
+				opacity: 0.5
+			}
+			58% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes progress {
+			100% {
+				transform: translateY(calc((var(--slides) - 1) * -100%));
+			}
+		}
+
+		@keyframes fade {
+			0% {
+				opacity: 0
+			}
+			50% {
+				opacity: 1
+			}
+		}
+
+		@keyframes text {
+			0%, 25% {
+				opacity: 0;
+				transform: translateY(50%);
+			}
+			50% {
+				opacity: 1;
+				transform: none;
+			}
+			75%, 100% {
+				opacity: 0;
+				transform: translateY(50%);
+			}
+		}
+
+		@keyframes wipe {
+			0% {
+				clip-path: inset(0 0 0 100%);
+			}
+			40%, 50% {
+				clip-path: inset(0);
+			}
+			90%, 100% {
+				clip-path: inset(0 100% 0 0);
+			}
+		}
+	</style>
+	<div class="@container min-h-screen relative isolate loadable flex flex-col pointer-events-none overflow-clip" style="timeline-scope: --scroller, --slide-1, --slide-2, --slide-3; --slides: 3;">
+		<img class="absolute bg-[#EDC089] -z-20 inset-0 h-full w-full animate-fade" style="animation-timeline: --slide-2" />
+		<img class="absolute bg-[#B6D6C9] -z-20 inset-0 h-full w-full animate-fade" style="animation-timeline: --slide-3" />
+		<header class="frame mx-7 relative z-50 flex max-lg:flex-col lg:items-center justify-between py-6 border-b gap-2 border-black/20 pointer-events-auto">
+			<div class="whitespace-nowrap">
+				<h1 class="font-bold inline align-middle">CSS-Only Carousel</h1>
+				<a title="Read the article" href="https://tympanus.net/codrops/?p=">
+					<svg class="h-3 ml-0.5 inline-block align-middle" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M1.00006 0.25H11.7501V11H10.2501V2.81066L1.53039 11.5303L0.469727 10.4697L9.1894 1.75H1.00006V0.25Z" fill="currentColor"/>
+					</svg>						
+				</a>
+			</div>
+			<nav class="flex items-center gap-10 lg:max-xl:contents">
+				<a href="index.html">Demo 1</a>
+				<a href="index2.html" aria-current="page">Demo 2</a>
+				<a href="index3.html">Demo 3</a>
+			</nav>
+			<a href="https://tympanus.net/codrops/?p=" class="lg:hidden">Previous demo</a>
+			<div id="cdawrap" class="cdawrap"><a href="https://www.ionos.com/hosting/deploy-now?itc=NGZ8GOUU-DWGP1F-HIU3B32&amp;ac=OM.US.USt64K430429T7073a&amp;utm_source=BSA23&amp;utm_medium=display&amp;utm_campaign=PTN-US-MIX-OMAX-EXT-AWR---&amp;photo=&amp;utm_content=BSACodropsSiteSponsor" class="cda-sponsor-link" target="_blank" rel="nofollow noopener">IONOS: Deploy static sites and PHP apps via GitHub with Deploy Now.</a></div>
+		</header>
+		<div class="h-screen lg:max-h-[1000px] flex-1 pt-14 relative flex flex-col">
+			<div class="rounded-full -z-10 absolute top-14 left-1/2 -translate-x-1/2 h-3/4 aspect-[3/4] overflow-clip">
+				<img class="object-cover animate-bg -left-[25%] -top-[25%] absolute size-[150%] max-w-none" style="animation-timeline: --slide-1" src="img/2/beach.jpg" role="presentation" alt="" />
+				<img class="object-cover object-left-top animate-bg -left-[25%] -top-[25%] absolute size-[150%] max-w-none" style="animation-timeline: --slide-2" src="img/2/savanna.jpg" role="presentation" alt="" />
+				<img class="object-cover animate-bg object-top -left-[25%] -top-[25%] absolute size-[150%] max-w-none" style="animation-timeline: --slide-3" src="img/2/glacier.jpg" role="presentation" alt="" />
+			</div>
+			<div class="absolute inset-0 h-full w-full overflow-x-auto snap-mandatory scroll-smooth snap-x scrollbar-hidden pointer-events-auto" style="scroll-timeline: --scroller x;">
+				<div class="grid grid-flow-col auto-cols-[50cqw] px-[25cqw] h-full w-fit">
+					<div class="snap-center overflow-hidden flex items-center justify-center" style="view-timeline: --slide-1 x; view-timeline-inset: 25cqw">
+						<img class="animate-bottle relative z-10 h-full object-contain" style="animation-timeline: --slide-1;" src="img/2/abyss.png" alt="White water bottle" />
+					</div>
+					<div class="snap-center overflow-hidden flex items-center justify-center" style="view-timeline: --slide-2 x; view-timeline-inset: 25cqw">
+						<img class="animate-bottle relative z-10 h-full object-contain" style="animation-timeline: --slide-2;" src="img/2/black.png" alt="White water bottle" />
+					</div>
+					<div class="snap-center overflow-hidden flex items-center justify-center" style="view-timeline: --slide-3 x; view-timeline-inset: 25cqw">
+						<img class="animate-bottle relative z-10 h-full object-contain" style="animation-timeline: --slide-3;" src="img/2/white.png" alt="White water bottle" />
+					</div>
+				</div>
+			</div>
+			<!-- Indicator -->
+			<span class="flex font-semibold absolute top-14 right-7">
+				<span class="overflow-y-clip mr-[0.5em]">
+					<span class="animate-progress overlap justify-items-end" aria-hidden="true" style="animation-timeline: --scroller">
+						<span>01</span>
+						<span class="translate-y-[100%]">02</span>
+						<span class="translate-y-[200%]">03</span>
+					</span>
+				</span>
+				/
+				03
+			</span>
+			<h1 class="uppercase font-semibold tracking-widest mb-6 pl-7">Closca Bottle Wave</h1>
+			<!-- Slides -->
+			<div class="overlap flex-1 w-1/2 pl-7">
+				<div class="flex flex-col justify-between animate-wipe" style="animation-timeline: --slide-1;">
+					<div class="w-[17rem]">
+						<h2 class="animate-text font-serif text-9xl" style="animation-timeline: --slide-1;">Abyss</h2>
+						<p class="animate-text font-serif text-5xl mt-2" style="animation-timeline: --slide-1;">$39.90</p>
+					</div>
+					<div class="w-[26rem] pb-8">
+						<p class="font-serif text-3xl italic animate-text mb-4" style="animation-timeline: --slide-1;">By 2050, there could be more plastic in our oceans than fish.</p>
+						<p class="animate-text" style="animation-timeline: --slide-1;">Plastic pollution injures more than 100,000 marine animals every year. It takes around 450 years for one plastic bottle to decompose.</p>
+						<a href="https://closca.com" class="animate-text relative z-50 group pointer-events-auto inline-flex gap-4 items-center !text-current mt-5" style="animation-timeline: --slide-1;">
+							<span class="font-semibold">Shop Now</span>
+							<svg class="w-6 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5303 0.469727L23.5607 5.50006L18.5303 10.5304L17.4697 9.46973L20.6893 6.25006H0.5V4.75006H20.6893L17.4697 1.53039L18.5303 0.469727Z" fill="currentColor"/>
+							</svg>																				
+						</a>
+					</div>
+				</div>
+				<div class="flex flex-col justify-between animate-wipe" style="animation-timeline: --slide-2;">
+					<div class="w-[17rem]">
+						<h2 class="animate-text font-serif text-9xl" style="animation-timeline: --slide-2;">Black</h2>
+						<p class="animate-text font-serif text-5xl mt-2" style="animation-timeline: --slide-2;">$39.90</p>
+					</div>
+					<div class="w-[26rem] pb-8">
+						<p class="font-serif text-3xl italic animate-text mb-2" style="animation-timeline: --slide-2;">The area affected by desertification is approx 11x India's size.</p>
+						<p class="animate-text text-pretty" style="animation-timeline: --slide-2;">Every minute, over a million plastic bottles are manufactured, and only 9% of them will have a second life.</p>
+						<a href="https://closca.com" class="animate-text relative z-50 group pointer-events-auto inline-flex gap-4 items-center !text-current mt-6" style="animation-timeline: --slide-2;">
+							<span class="font-semibold">Shop Now</span>
+							<svg class="w-6 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5303 0.469727L23.5607 5.50006L18.5303 10.5304L17.4697 9.46973L20.6893 6.25006H0.5V4.75006H20.6893L17.4697 1.53039L18.5303 0.469727Z" fill="currentColor"/>
+							</svg>																			
+						</a>
+					</div>
+				</div>
+			</div>
+			<a href="" class="max-lg:hidden absolute z-50 bottom-7 right-7 pointer-events-auto">Previous Demo</a>
+		</div>
+	</div>
+</html>

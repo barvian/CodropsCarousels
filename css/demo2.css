@@ -1,0 +1,127 @@
+@import "./shared.css";
+
+@layer utilities {
+    .animate-bottle {
+        animation: bottle auto linear both;
+        
+        @media screen(lg) {
+            animation-name: bottle-lg;
+        }
+    }
+
+    .animate-bg {
+        animation: bg auto linear both;
+    }
+
+    .animate-page {
+        animation: page auto linear both;
+    }
+
+    .animate-fade {
+        animation: fade auto linear both;
+    }
+
+    .animate-progress {
+        animation: progress auto linear both;
+    }
+
+    .animate-text {
+        animation: text auto linear both;
+        
+        @media screen(lg) {
+            animation-name: text-lg;
+        }
+    }
+
+    @keyframes bottle {
+        0% {
+            transform: scale(0.65)
+        }
+        50% {
+            transform: translateY(3rem);
+        }
+        100% {
+            transform: scale(0.65);
+        }
+    }
+
+    @keyframes bottle-lg {
+        0% {
+            transform: scale(0.65)
+        }
+        50% {
+            transform: translateY(3rem);
+        }
+        100% {
+            transform: scale(0.65) translateX(-40%);
+        }
+    }
+
+    @keyframes bg {
+        0% {
+            opacity: 0;
+            transform: scale(1.2)
+        }
+        50% {
+            opacity: 1;
+            transform: none
+        }
+        100% {
+            transform: scale(0.8)
+        }
+    }
+
+    @keyframes page {
+        0%, 100% {
+            opacity: 0.5
+        }
+        58% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes progress {
+        100% {
+            transform: translateY(calc((var(--slides) - 1) * -100%));
+        }
+    }
+
+    @keyframes fade {
+        0% {
+            opacity: 0
+        }
+        50% {
+            opacity: 1
+        }
+    }
+
+    @keyframes text {
+        0%, 25% {
+            opacity: 0;
+            transform: translateX(50%);
+        }
+        50% {
+            opacity: 1;
+            transform: none;
+        }
+        75%, 100% {
+            opacity: 0;
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes text-lg {
+        0%, 40% {
+            opacity: 0;
+            transform: translateX(50%);
+        }
+        50% {
+            opacity: 1;
+            transform: none;
+        }
+        60%, 100% {
+            opacity: 0;
+            transform: translateX(-50%);
+        }
+    }
+}
