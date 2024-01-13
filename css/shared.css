@@ -1,6 +1,3 @@
-@import "@fontsource-variable/inter";
-@import "@fontsource/cardo/latin-400.css";
-@import "@fontsource/cardo/latin-400-italic.css";
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";

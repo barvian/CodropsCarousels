@@ -2,7 +2,7 @@ import contanierQueries from '@tailwindcss/container-queries'
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./*.html'],
+  content: ['./index2.html'],
   theme: {
     extend: {
       fontFamily: {

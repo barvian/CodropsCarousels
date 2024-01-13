@@ -1,4 +1,8 @@
 @import "./shared.css";
+@import "@fontsource-variable/inter";
+@import "@fontsource/cardo/latin-400.css";
+@import "@fontsource/cardo/latin-400-italic.css";
+@config "../tailwind.demo2.config.js";
 
 @layer utilities {
     .animate-bottle {

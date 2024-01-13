@@ -1,4 +1,8 @@
 @import "./shared.css";
+@import "@fontsource-variable/inter";
+@import "@fontsource/cardo/latin-400.css";
+@import "@fontsource/cardo/latin-400-italic.css";
+@config "../tailwind.demo1.config.js";
 
 @layer utilities {
     .animate-grow {
