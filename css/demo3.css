@@ -2,95 +2,77 @@
 @import "@fontsource-variable/inter";
 @import "@fontsource/cardo/latin-400.css";
 @import "@fontsource/cardo/latin-400-italic.css";
-@config "../tailwind.demo2.config.js";
+@config "../tailwind.demo3.config.js";
 
 @layer utilities {
-    .animate-bottle {
-        animation: bottle auto linear both;
-        
-        @media screen(lg) {
-            animation-name: bottle-lg;
-        }
-    }
-
-    .animate-bg {
-        animation: bg auto linear both;
-    }
-
-    .animate-page {
-        animation: page auto linear both;
+    .animate-text-up {
+        animation: text-up auto linear both;
     }
 
     .animate-fade {
         animation: fade auto linear both;
     }
 
-    .animate-progress {
-        animation: progress auto linear both;
-    }
-
-    .animate-text {
-        animation: text auto linear both;
-        
-        @media screen(lg) {
-            animation-name: text-lg;
-        }
-
-        @media screen(3xl) {
-            animation-name: text-3xl;
-        }
-    }
-
-    @keyframes bottle {
-        0% {
-            transform: scale(0.65)
-        }
+    @keyframes fade-out {
         50% {
-            transform: translateY(3rem);
+            opacity: 1;
         }
         100% {
-            transform: scale(0.65);
+            opacity: 0
         }
     }
 
-    @keyframes bottle-lg {
-        0% {
-            transform: scale(0.65)
-        }
+    @keyframes first {
         50% {
-            transform: translateY(3rem);
+            transform: rotate(-5deg);
         }
         100% {
-            transform: scale(0.65) translateX(-40%);
+            transform: rotate(-22deg) translateX(-120%);
         }
     }
 
-    @keyframes bg {
+    @keyframes second {
+        50% {
+            transform: rotate(5deg)
+        }
+    }
+
+    @keyframes third {
+        50% {
+            transform: rotate(-9deg)
+        }
+    }
+
+    @keyframes fourth {
+        50% {
+            transform: rotate(9.5deg)
+        }
+    }
+
+    @keyframes fifth {
+        50% {
+            transform: rotate(9.5deg)
+        }
+    }
+
+    @keyframes sixth {
+        50% {
+            transform: rotate(9.5deg)
+        }
+    }
+    
+    @keyframes text-up {
         0% {
-            opacity: 0;
-            transform: scale(1.2)
+            opacity: 0.5;
+            transform: translateY(105%);
         }
         50% {
             opacity: 1;
-            transform: none
+            transform: none;
         }
         100% {
-            transform: scale(0.8)
-        }
-    }
-
-    @keyframes page {
-        0%, 100% {
-            opacity: 0.5
-        }
-        58% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes progress {
-        100% {
-            transform: translateY(calc((var(--slides) - 1) * -100%));
+            opacity: 0.5;
+            transform: translateY(-105%);
         }
     }
 
@@ -100,51 +82,6 @@
         }
         50% {
             opacity: 1
-        }
-    }
-
-    @keyframes text {
-        0%, 25% {
-            opacity: 0;
-            transform: translateX(50%);
-        }
-        50% {
-            opacity: 1;
-            transform: none;
-        }
-        75%, 100% {
-            opacity: 0;
-            transform: translateX(-50%);
-        }
-    }
-
-    @keyframes text-lg {
-        0%, 40% {
-            opacity: 0;
-            transform: translateX(50%);
-        }
-        50% {
-            opacity: 1;
-            transform: none;
-        }
-        60%, 100% {
-            opacity: 0;
-            transform: translateX(-50%);
-        }
-    }
-
-    @keyframes text-3xl {
-        0%, 25% {
-            opacity: 0;
-            transform: translateX(calc(25cqw + 50%));
-        }
-        50% {
-            opacity: 1;
-            transform: none;
-        }
-        75%, 100% {
-            opacity: 0;
-            transform: translateX(calc(-50% - 25cqw));
         }
     }
 }

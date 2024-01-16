@@ -3,6 +3,11 @@
 @import "tailwindcss/utilities";
 
 @layer base {
+    * {
+        min-width: 0;
+        min-height: 0;
+    }
+    
     :root {
         background: var(--color-bg);
     }
@@ -14,11 +19,9 @@
     a:not(:hover,:focus-visible,[aria-current="page"]) {
         color: color-mix(in srgb, currentColor 60%, transparent);
     }
-}
-
-@layer components {
+    
     /* Page loader */
-    :root[data-loading] .loadable {
+    :root[data-loading] body {
         &::before,
         &::after {
             content: '';
