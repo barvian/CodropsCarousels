@@ -1,0 +1,4 @@
+- [ ] Meta tags
+- [ ] Unsupported message
+- [ ] Prettify (?)
+- [ ] Finish this readme

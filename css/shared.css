@@ -21,7 +21,7 @@
     }
     
     /* Page loader */
-    :root[data-loading] body {
+    :root[data-js][data-loading] body {
         &::before,
         &::after {
             content: '';
