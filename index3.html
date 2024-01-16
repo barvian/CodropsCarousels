@@ -2,7 +2,7 @@
 <html lang="en" data-loading class="[--color-bg:#2a2a2a] isolate before:-z-20 before:absolute before:inset-0 before:w-full before:h-full before:bg-noise text-white antialiased">
     <meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>CSS-Only Carousel | Codrops</title>
+	<title>CSS-Only Carousels | Codrops</title>
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="Codrops" />
@@ -20,7 +20,7 @@
 		<div class="absolute bg-[#2E423D] -z-30 inset-0 h-full w-full animate-fade" style="animation-timeline: --slide-6"></div>
 		<header class="frame relative z-50 mx-7 flex max-lg:flex-col justify-between py-6 gap-2">
 			<div class="whitespace-nowrap">
-				<h1 class="font-bold inline align-middle">CSS-Only Carousel</h1>
+				<h1 class="font-bold inline align-middle">CSS-Only Carousels</h1>
 				<a title="Read the article" href="https://tympanus.net/codrops/?p=">
 					<svg class="h-3 ml-0.5 inline-block align-middle" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M1.00006 0.25H11.7501V11H10.2501V2.81066L1.53039 11.5303L0.469727 10.4697L9.1894 1.75H1.00006V0.25Z" fill="currentColor"/>
@@ -35,9 +35,9 @@
 			<a href="https://tympanus.net/codrops/?p=" class="lg:hidden">Previous demo</a>
 			<div id="cdawrap" class="cdawrap"><a href="https://www.ionos.com/hosting/deploy-now?itc=NGZ8GOUU-DWGP1F-HIU3B32&amp;ac=OM.US.USt64K430429T7073a&amp;utm_source=BSA23&amp;utm_medium=display&amp;utm_campaign=PTN-US-MIX-OMAX-EXT-AWR---&amp;photo=&amp;utm_content=BSACodropsSiteSponsor" class="cda-sponsor-link" target="_blank" rel="nofollow noopener">IONOS: Deploy static sites and PHP apps via GitHub with Deploy Now.</a></div>
 		</header>
-		<div class="flex-1 flex items-stretch">
+		<div class="flex-1 flex min-h-[300px] items-stretch">
 			<div class="@container-[size] relative w-full">
-				<div class="absolute inset-0 h-full w-full overflow-y-auto snap-mandatory scroll-smooth snap-x scrollbar-hidden" style="scroll-timeline: --scroller x; --item-width: calc(100cqh * var(--item-aspect))">
+				<div class="absolute inset-0 h-full w-full overflow-y-auto snap-mandatory scroll-smooth snap-x scrollbar-hidden" style="scroll-timeline: --scroller x; --item-width: calc(min(100cqh, 1000px) * var(--item-aspect))">
 					<div class="grid grid-flow-col px-[--inset-x] auto-cols-[--item-width] h-full w-fit" style="--inset-x: calc(50cqw - var(--item-width)/2)">
 						<div role="none" class="snap-center" style="view-timeline: --slide-1 x; view-timeline-inset: var(--inset-x)"></div>
 						<div role="none" class="snap-center" style="view-timeline: --slide-2 x; view-timeline-inset: var(--inset-x)"></div>
@@ -49,20 +49,43 @@
 				</div>
 				<!-- Photos -->
 				<div class="inset-x-0 inset-y-[7.5cqh] absolute overlap isolate items-center justify-center pointer-events-none">
-					<img class="max-h-full" style="animation: first auto linear both, fade-out auto linear both; animation-timeline: --slide-1; animation-composition: add, replace;" src="img/3/fashion.jpg" alt="fashion" />
-					<img class="max-h-full -z-[1]" style="animation: second auto linear both, first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-2; animation-composition: add, add, replace;" src="img/3/art.jpg" alt="artwork" />
-					<img class="max-h-full -z-[2]" style="animation: third auto linear both, second auto linear both, first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-3; animation-composition: add, add, add, replace;" src="img/3/woman.jpg" alt="photography" />
-					<img class="max-h-full -z-[3]" style="animation: fourth auto linear both, third auto linear both, second auto linear both, first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-4; animation-composition: add, add, add, add, replace;" src="img/3/sunglasses.jpg" alt="photography" />
-					<img class="max-h-full -z-[4]" style="animation: fifth auto linear both, fourth auto linear both, third auto linear both, second auto linear both, first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-5, --slide-5; animation-composition: add, add, add, add, add, replace;" src="img/3/pockets.jpg" alt="photography" />
-					<img class="max-h-full -z-[5]" style="animation: sixth auto linear both, fifth auto linear both, fourth auto linear both, third auto linear both, second auto linear both, first auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-5, --slide-6; animation-composition: add;" src="img/3/lights.jpg" alt="photography" />
+					<img class="h-full gbgbgb max-h-[1000px]" style="animation: first auto linear both, fade-out auto linear both; animation-timeline: --slide-1; animation-composition: add, replace;" src="img/3/fashion.jpg" alt="fashion" />
+					<img class="h-full max-h-[1000px] -z-[1]" style="animation: second auto linear both, first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-2; animation-composition: add, add, replace;" src="img/3/art.jpg" alt="artwork" />
+					<img class="h-full max-h-[1000px] -z-[2]" style="animation: third auto linear both, second auto linear both, first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-3; animation-composition: add, add, add, replace;" src="img/3/woman.jpg" alt="photography" />
+					<img class="h-full max-h-[1000px] -z-[3]" style="animation: fourth auto linear both, third auto linear both, second auto linear both, first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-4; animation-composition: add, add, add, add, replace;" src="img/3/sunglasses.jpg" alt="photography" />
+					<img class="h-full max-h-[1000px] -z-[4]" style="animation: fifth auto linear both, fourth auto linear both, third auto linear both, second auto linear both, first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-5, --slide-5; animation-composition: add, add, add, add, add, replace;" src="img/3/pockets.jpg" alt="photography" />
+					<img class="h-full max-h-[1000px] -z-[5]" style="animation: sixth auto linear both, fifth auto linear both, fourth auto linear both, third auto linear both, second auto linear both, first auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-5, --slide-6; animation-composition: add;" src="img/3/lights.jpg" alt="photography" />
 				</div>
+			</div>
+			<!-- Indicator -->
+			<div class="[@media(max-aspect-ratio:335/511)]:hidden flex flex-col gap-2 items-center font-medium absolute top-1/2 -translate-y-1/2 left-7">
+				<span class="overflow-y-clip">
+					<span class="animate-indicator overlap justify-items-center" aria-hidden="true" style="animation-timeline: --scroller">
+						<span>01</span>
+						<span class="translate-y-[100%]">02</span>
+						<span class="translate-y-[200%]">03</span>
+						<span class="translate-y-[300%]">04</span>
+						<span class="translate-y-[400%]">05</span>
+						<span class="translate-y-[500%]">06</span>
+					</span>
+				</span>
+				<div class="bg-white/20">
+					<div class="bg-white w-0.5 h-32 animate-progress origin-top" style="animation-timeline: --scroller;"></div>
+				</div>
+				06
 			</div>
 			<a href="" class="max-lg:hidden [writing-mode:vertical-lr] absolute z-50 top-1/2 -translate-y-1/2 right-7 pointer-events-auto">Previous Demo</a>
 		</div>
 		<!-- Captions -->
-		<div class="overlap font-serif overflow-clip whitespace-nowrap -mb-[0.45em] text-[min(15.625rem,30vh)]/none justify-items-center opacity-50 select-none w-fit translate-x-[calc(50vw-50%)]">
-			<span class="animate-text-up" style="animation-timeline: --slide-1;">Fashion</span>
-			<span class="animate-text-up" style="animation-timeline: --slide-2;">Artworks</span>
+		<div class="h-[0.65em] [clip-path:inset(0.05em_0_0)] overflow-clip text-[min(15.625rem,20vh)]/[1.2] font-serif select-none">
+			<div class="flex flex-col whitespace-nowrap items-center opacity-50 w-fit translate-x-[calc(50vw-50%)] animate-captions" style="animation-timeline: --scroller; animation-composition: add">
+				<span>Fashion</span>
+				<span>Artworks</span>
+				<span>Portraits</span>
+				<span>Still Life</span>
+				<span>Lifestyle</span>
+				<span>Wedding</span>
+			</div>
 		</div>
 	</div>
 </html>

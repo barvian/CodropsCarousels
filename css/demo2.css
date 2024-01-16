@@ -6,7 +6,7 @@
 
 @layer utilities {
     .animate-bottle {
-        animation: bottle auto linear both;
+        animation: bottle linear both;
         
         @media screen(lg) {
             animation-name: bottle-lg;
@@ -14,23 +14,23 @@
     }
 
     .animate-bg {
-        animation: bg auto linear both;
+        animation: bg linear both;
     }
 
     .animate-page {
-        animation: page auto linear both;
+        animation: page linear both;
     }
 
     .animate-fade {
-        animation: fade auto linear both;
+        animation: fade linear both;
     }
 
     .animate-progress {
-        animation: progress auto linear both;
+        animation: progress linear both;
     }
 
     .animate-text {
-        animation: text auto linear both;
+        animation: text linear both;
         
         @media screen(lg) {
             animation-name: text-lg;

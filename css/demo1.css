@@ -6,23 +6,23 @@
 
 @layer utilities {
     .animate-grow {
-        animation: grow auto linear both;
+        animation: grow linear both;
     }
 
     .animate-page {
-        animation: page auto linear both;
+        animation: page linear both;
     }
 
     .animate-progress {
-        animation: progress auto linear both;
+        animation: progress linear both;
     }
 
     .animate-text {
-        animation: text auto linear both;
+        animation: text linear both;
     }
 
     .animate-text-up {
-        animation: text-up auto linear both;
+        animation: text-up linear both;
     }
 
     @keyframes grow {
@@ -59,7 +59,7 @@
 
     @keyframes progress {
         from {
-            transform: scaleX(calc(1/(var(--slides) + 0.3)));
+            transform: scaleX(calc(1/var(--slides)));
         }
     }
 

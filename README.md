@@ -1,4 +1,5 @@
 - [ ] Meta tags
-- [ ] Unsupported message
+- [ ] Unsupported SDA message
 - [ ] Prettify (?)
+- [x] Fix scroll area size
 - [ ] Finish this readme
