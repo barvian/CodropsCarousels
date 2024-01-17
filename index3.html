@@ -77,8 +77,8 @@
 			<a href="" class="max-lg:hidden [writing-mode:vertical-lr] absolute z-50 top-1/2 -translate-y-1/2 right-7 pointer-events-auto">Previous Demo</a>
 		</div>
 		<!-- Captions -->
-		<div class="h-[0.65em] [clip-path:inset(0.05em_0_0)] overflow-clip text-[min(15.625rem,20vh)]/[1.2] font-serif select-none">
-			<div class="flex flex-col whitespace-nowrap items-center opacity-50 w-fit translate-x-[calc(50vw-50%)] animate-captions" style="animation-timeline: --scroller; animation-composition: add">
+		<div class="h-[0.65em] animate-scroll-pos [clip-path:inset(0.05em_0_0)] overflow-clip text-[min(15.625rem,20vh)]/[1.2] font-serif select-none" style="animation-timeline: --scroller;">
+			<div class="flex flex-col whitespace-nowrap items-center opacity-50 w-fit translate-x-[calc(50vw-50%)] animate-captions *:scale-y-[calc(var(--scroll-velocity-abs)*2+1)] *:translate-y-[calc(var(--scroll-velocity)*-100%)]" style="animation-timeline: --scroller; animation-composition: add; transition: --scroll-position-delayed 0.15s linear; --scroll-velocity: calc(var(--scroll-position) - var(--scroll-position-delayed)); --scroll-velocity-abs: max(var(--scroll-velocity), -1*var(--scroll-velocity))">
 				<span>Fashion</span>
 				<span>Artworks</span>
 				<span>Portraits</span>

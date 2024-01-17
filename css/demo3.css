@@ -4,6 +4,17 @@
 @import "@fontsource/cardo/latin-400-italic.css";
 @config "../tailwind.demo3.config.js";
 
+@property --scroll-position {
+	syntax: "<number>";
+	inherits: true;
+	initial-value: 0;
+}
+@property --scroll-position-delayed {
+	syntax: "<number>";
+	inherits: true;
+	initial-value: 0;
+}
+
 @layer utilities {
     .animate-text-up {
         animation: text-up linear both;
@@ -23,6 +34,10 @@
 
     .animate-progress {
         animation: progress linear both;
+    }
+
+    .animate-scroll-pos {
+        animation: adjust-pos linear both;
     }
 
     @keyframes captions {
@@ -112,6 +127,13 @@
     @keyframes progress {
         from {
             transform: scaleY(calc(1/var(--slides)));
+        }
+    }
+
+    @keyframes adjust-pos {
+        to {
+            --scroll-position: 1;
+            --scroll-position-delayed: 1;
         }
     }
 }
