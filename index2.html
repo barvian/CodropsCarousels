@@ -1,18 +1,22 @@
 <!doctype html>
 <html lang="en" data-loading class="[--color-bg:#E9DFCF] text-neutral-750 antialiased">
-    <meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>CSS-Only Carousels | Codrops</title>
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="Codrops" />
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/demo2.css" />
-	<script>
-		document.documentElement.setAttribute('data-js', '')
-		window.addEventListener('load', () => document.documentElement.removeAttribute('data-loading'))
-	</script>
-	<div class="@container min-h-screen relative isolate flex flex-col pointer-events-none overflow-clip" style="timeline-scope: --scroller, --slide-1, --slide-2, --slide-3; --slides: 3;">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CSS-Only Carousels | Codrops</title>
+		<meta name="description" content="Highly-experimental CSS-only carousel variations that use the new scroll-driven animation properties" />
+		<meta name="keywords" content="CSS animations, scroll-driven animations, CSS on-scroll animations" />
+		<meta name="author" content="Maxwell Barvian for Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="css/demo2.css" />
+		<script>
+			document.documentElement.setAttribute('data-js', '')
+			window.addEventListener('load', () => document.documentElement.removeAttribute('data-loading'))
+		</script>
+		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+	</head>
+	<body>
+	<div class="@container min-h-screen relative isolate flex flex-col supports-sda:pointer-events-none overflow-clip" style="timeline-scope: --scroller, --slide-1, --slide-2, --slide-3; --slides: 3;">
 		<div class="absolute bg-[#EDC089] -z-20 inset-0 h-full w-full animate-fade" style="animation-timeline: --slide-2"></div>
 		<div class="absolute bg-[#B6D6C9] -z-20 inset-0 h-full w-full animate-fade" style="animation-timeline: --slide-3"></div>
 		<header class="frame mx-7 relative z-50 flex max-lg:flex-col justify-between py-6 border-b gap-2 border-black/20 pointer-events-auto">
@@ -30,9 +34,8 @@
 				<a href="index3.html">Demo 3</a>
 			</nav>
 			<a href="https://tympanus.net/codrops/?p=" class="lg:hidden">Previous demo</a>
-			<div id="cdawrap" class="cdawrap"><a href="https://www.ionos.com/hosting/deploy-now?itc=NGZ8GOUU-DWGP1F-HIU3B32&amp;ac=OM.US.USt64K430429T7073a&amp;utm_source=BSA23&amp;utm_medium=display&amp;utm_campaign=PTN-US-MIX-OMAX-EXT-AWR---&amp;photo=&amp;utm_content=BSACodropsSiteSponsor" class="cda-sponsor-link" target="_blank" rel="nofollow noopener">IONOS: Deploy static sites and PHP apps via GitHub with Deploy Now.</a></div>
 		</header>
-		<main class="lg:max-h-[1000px] flex-1 py-14 lg:pb-9 relative flex flex-col">
+		<main class="lg:max-h-[1000px] hidden supports-sda:flex flex-1 py-14 lg:pb-9 relative flex-col">
 			<div class="max-lg:relative lg:contents">
 				<div class="rounded-full -z-10 absolute top-0 lg:top-14 left-1/2 -translate-x-1/2 h-3/4 aspect-[3/4] overflow-clip">
 					<img class="object-cover animate-bg -left-[25%] -top-[25%] absolute size-[150%] max-w-none" style="animation-timeline: --slide-1" src="img/2/beach.jpg" role="presentation" alt="" />
@@ -110,5 +113,10 @@
 			</div>
 			<a href="" class="max-lg:hidden absolute z-50 bottom-7 right-7 pointer-events-auto">Previous Demo</a>
 		</main>
+		<div class="supports-sda:hidden p-7">
+			Your browser does not support scroll-driven animations. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">MDN</a> for browser compatibility tables.
+		</div>
 	</div>
+	<!--script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script-->
+</body>
 </html>

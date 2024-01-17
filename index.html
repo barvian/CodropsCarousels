@@ -1,85 +1,93 @@
 <!doctype html>
 <html lang="en" data-loading class="[--color-bg:theme(colors.black)] text-white antialiased">
-    <meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>CSS-Only Carousels | Codrops</title>
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="Codrops" />
-	<link rel="stylesheet" href="css/demo1.css" />
-	<link rel="shortcut icon" href="favicon.ico">
-	<script>
-		document.documentElement.setAttribute('data-js', '')
-		window.addEventListener('load', () => document.documentElement.removeAttribute('data-loading'))
-	</script>
-	<div class="@container min-h-screen relative isolate flex flex-col gap-8 pointer-events-none overflow-clip" style="timeline-scope: --scroller, --slide-1, --slide-2, --slide-3; --slides: 3;">
-		<img class="absolute -z-20 inset-0 h-full w-full object-cover animate-grow" style="animation-timeline: --slide-1" src="img/1/biker.jpg" />
-		<img class="absolute -z-20 inset-0 h-full w-full object-cover animate-grow" style="animation-timeline: --slide-2" src="img/1/bottle.jpg" />
-		<img class="absolute -z-20 inset-0 h-full w-full object-cover animate-grow" style="animation-timeline: --slide-3" src="img/1/helmet.jpg" />
-		<div class="absolute -z-10 inset-0 h-full w-full overflow-x-auto snap-mandatory scroll-smooth snap-x scrollbar-hidden pointer-events-auto" style="scroll-timeline: --scroller x;">
-			<div class="grid grid-flow-col auto-cols-[70cqw] pr-[30cqw] h-full w-fit">
-				<div role="none" id="slide-1" class="snap-start" style="view-timeline: --slide-1 x;"></div>
-				<div role="none" id="slide-2" class="snap-start" style="view-timeline: --slide-2 x;"></div>
-				<div role="none" id="slide-3" class="snap-start" style="view-timeline: --slide-3 x;"></div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CSS-Only Carousels | Codrops</title>
+		<meta name="description" content="Highly-experimental CSS-only carousel variations that use the new scroll-driven animation properties" />
+		<meta name="keywords" content="CSS animations, scroll-driven animations, CSS on-scroll animations" />
+		<meta name="author" content="Maxwell Barvian for Codrops" />
+		<link rel="stylesheet" href="css/demo1.css" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<script>
+			document.documentElement.setAttribute('data-js', '')
+			window.addEventListener('load', () => document.documentElement.removeAttribute('data-loading'))
+		</script>
+		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+	</head>
+	<body>
+		<div class="@container min-h-screen relative isolate flex flex-col gap-8 supports-sda:pointer-events-none overflow-clip" style="timeline-scope: --scroller, --slide-1, --slide-2, --slide-3; --slides: 3;">
+			<img class="absolute hidden supports-sda:block -z-20 inset-0 h-full w-full object-cover animate-grow" style="animation-timeline: --slide-1" src="img/1/biker.jpg" />
+			<img class="absolute hidden supports-sda:block -z-20 inset-0 h-full w-full object-cover animate-grow" style="animation-timeline: --slide-2" src="img/1/bottle.jpg" />
+			<img class="absolute hidden supports-sda:block -z-20 inset-0 h-full w-full object-cover animate-grow" style="animation-timeline: --slide-3" src="img/1/helmet.jpg" />
+			<div class="absolute hidden supports-sda:block -z-10 inset-0 h-full w-full overflow-x-auto snap-mandatory scroll-smooth snap-x scrollbar-hidden pointer-events-auto" style="scroll-timeline: --scroller x;">
+				<div class="grid grid-flow-col auto-cols-[70cqw] pr-[30cqw] h-full w-fit">
+					<div role="none" id="slide-1" class="snap-start" style="view-timeline: --slide-1 x;"></div>
+					<div role="none" id="slide-2" class="snap-start" style="view-timeline: --slide-2 x;"></div>
+					<div role="none" id="slide-3" class="snap-start" style="view-timeline: --slide-3 x;"></div>
+				</div>
 			</div>
-		</div>
-		<header class="frame relative z-50 mx-7 flex max-lg:flex-col justify-between py-6 border-b gap-2 border-white/60 pointer-events-auto">
-			<div class="whitespace-nowrap">
-				<h1 class="font-bold inline align-middle">CSS-Only Carousels</h1>
-				<a title="Read the article" href="https://tympanus.net/codrops/?p=">
-					<svg class="h-3 ml-0.5 inline-block align-middle" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M1.00006 0.25H11.7501V11H10.2501V2.81066L1.53039 11.5303L0.469727 10.4697L9.1894 1.75H1.00006V0.25Z" fill="currentColor"/>
-					</svg>						
-				</a>
-			</div>
-			<nav class="flex items-center gap-10 lg:max-xl:contents">
-				<a href="index.html" aria-current="page">Demo 1</a>
-				<a href="index2.html">Demo 2</a>
-				<a href="index3.html">Demo 3</a>
-			</nav>
-			<a href="https://tympanus.net/codrops/?p=" class="lg:hidden">Previous demo</a>
-			<div id="cdawrap" class="cdawrap"><a href="https://www.ionos.com/hosting/deploy-now?itc=NGZ8GOUU-DWGP1F-HIU3B32&amp;ac=OM.US.USt64K430429T7073a&amp;utm_source=BSA23&amp;utm_medium=display&amp;utm_campaign=PTN-US-MIX-OMAX-EXT-AWR---&amp;photo=&amp;utm_content=BSACodropsSiteSponsor" class="cda-sponsor-link" target="_blank" rel="nofollow noopener">IONOS: Deploy static sites and PHP apps via GitHub with Deploy Now.</a></div>
-		</header>
-		<div class="flex-1 px-7 relative flex flex-col gap-[inherit]">
-			<!-- Slides -->
-			<div class="overlap w-[17rem]">
-				<p class="animate-text translate-y-[50%] skew-y-[1.5deg]" style="animation-timeline: --slide-1; animation-range-start: 30cqw;">
-					Move around your city safely and comfortably, while reducing your carbon footprint and helping to keep the air we breathe clean.
-				</p>
-				<p class="animate-text translate-y-[50%] skew-y-[1.5deg]" style="animation-timeline: --slide-2; animation-range-start: 30cqw;">
-					Let’s do it responsibly and avoid having more plastic in the sea than fish. Take your refillable bottle with you and say no to plastic when drinking water.
-				</p>
-				<p class="animate-text translate-y-[50%] skew-y-[1.5deg]" style="animation-timeline: --slide-3; animation-range-start: 30cqw;">
-					The Reflective Helmet seamlessly integrates reflective technology, ensuring visibility without drawing unnecessary attention. The perfect choice for the mindful cyclist.
-				</p>
-			</div>
-			<!-- Indicator -->
-			<div class="w-60 my-auto">
-				<nav class="flex font-medium text-sm gap-5">
-					<a href="#slide-1" class="animate-page !text-white pointer-events-auto" style="animation-timeline: --slide-1; animation-range-start: 30cqw;">01</a>
-					<a href="#slide-2" class="animate-page !text-white pointer-events-auto" style="animation-timeline: --slide-2; animation-range-start: 30cqw;">02</a>
-					<a href="#slide-3" class="animate-page !text-white pointer-events-auto" style="animation-timeline: --slide-3; animation-range-start: 30cqw;">03</a>
+			<header class="frame relative z-50 mx-7 flex max-lg:flex-col justify-between py-6 border-b gap-2 border-white/60 pointer-events-auto">
+				<div class="whitespace-nowrap">
+					<h1 class="font-bold inline align-middle">CSS-Only Carousels</h1>
+					<a title="Read the article" href="https://tympanus.net/codrops/?p=">
+						<svg class="h-3 ml-0.5 inline-block align-middle" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M1.00006 0.25H11.7501V11H10.2501V2.81066L1.53039 11.5303L0.469727 10.4697L9.1894 1.75H1.00006V0.25Z" fill="currentColor"/>
+						</svg>						
+					</a>
+				</div>
+				<nav class="flex items-center gap-10 lg:max-xl:contents">
+					<a href="index.html" aria-current="page">Demo 1</a>
+					<a href="index2.html">Demo 2</a>
+					<a href="index3.html">Demo 3</a>
 				</nav>
-				<div class="bg-white/60 mt-2">
-					<div class="bg-white h-0.5 animate-progress origin-left" style="animation-timeline: --scroller;"></div>
+				<a href="https://tympanus.net/codrops/?p=" class="lg:hidden">Previous demo</a>
+			</header>
+			<div class="flex-1 px-7 relative hidden supports-sda:flex flex-col gap-[inherit]">
+				<!-- Slides -->
+				<div class="overlap w-[17rem]">
+					<p class="animate-text translate-y-[50%] skew-y-[1.5deg]" style="animation-timeline: --slide-1; animation-range-start: 30cqw;">
+						Move around your city safely and comfortably, while reducing your carbon footprint and helping to keep the air we breathe clean.
+					</p>
+					<p class="animate-text translate-y-[50%] skew-y-[1.5deg]" style="animation-timeline: --slide-2; animation-range-start: 30cqw;">
+						Let’s do it responsibly and avoid having more plastic in the sea than fish. Take your refillable bottle with you and say no to plastic when drinking water.
+					</p>
+					<p class="animate-text translate-y-[50%] skew-y-[1.5deg]" style="animation-timeline: --slide-3; animation-range-start: 30cqw;">
+						The Reflective Helmet seamlessly integrates reflective technology, ensuring visibility without drawing unnecessary attention. The perfect choice for the mindful cyclist.
+					</p>
 				</div>
+				<!-- Indicator -->
+				<div class="w-60 my-auto">
+					<nav class="flex font-medium text-sm gap-5">
+						<a href="#slide-1" class="animate-page !text-white pointer-events-auto" style="animation-timeline: --slide-1; animation-range-start: 30cqw;">01</a>
+						<a href="#slide-2" class="animate-page !text-white pointer-events-auto" style="animation-timeline: --slide-2; animation-range-start: 30cqw;">02</a>
+						<a href="#slide-3" class="animate-page !text-white pointer-events-auto" style="animation-timeline: --slide-3; animation-range-start: 30cqw;">03</a>
+					</nav>
+					<div class="bg-white/60 mt-2">
+						<div class="bg-white h-0.5 animate-progress origin-left" style="animation-timeline: --scroller;"></div>
+					</div>
+				</div>
+				<!-- Captions -->
+				<div class="overlap items-end w-[31rem]">
+					<div>
+						<span class="block overflow-clip"><span class="block uppercase font-medium tracking-widest mb-4 animate-text-up" style="animation-timeline: --slide-1; animation-range-start: 30cqw;">Commuter Helmet</span></span>
+						<p class="pb-7 font-serif text-8xl animate-text translate-y-[205%] skew-y-6" style="animation-timeline: --slide-1; animation-range-start: 30cqw;">Perfect for urban <em>riders</em></p>
+					</div>
+					<div>
+						<span class="block overflow-clip"><span class="block uppercase font-medium tracking-widest mb-4 animate-text-up" style="animation-timeline: --slide-2; animation-range-start: 30cqw;">Smart bottle</span></span>
+						<p class="pb-7 font-serif text-8xl animate-text translate-y-[205%] skew-y-6" style="animation-timeline: --slide-2; animation-range-start: 30cqw;">We're all <em>connected</em></p>
+					</div>
+					<div>
+						<span class="block overflow-clip"><span class="block uppercase font-medium tracking-widest mb-4 animate-text-up" style="animation-timeline: --slide-3; animation-range-start: 30cqw;">Reflective Helmet</span></span>
+						<p class="pb-7 font-serif text-8xl animate-text translate-y-[205%] skew-y-6" style="animation-timeline: --slide-3; animation-range-start: 30cqw;">Ready for <em>late nights</em></p>
+					</div>
+				</div>
+				<a href="" class="max-lg:hidden absolute z-50 bottom-7 right-7 pointer-events-auto">Previous Demo</a>
 			</div>
-			<!-- Captions -->
-			<div class="overlap items-end w-[31rem]">
-				<div>
-					<span class="block overflow-clip"><span class="block uppercase font-medium tracking-widest mb-4 animate-text-up" style="animation-timeline: --slide-1; animation-range-start: 30cqw;">Commuter Helmet</span></span>
-					<p class="pb-7 font-serif text-8xl animate-text translate-y-[205%] skew-y-6" style="animation-timeline: --slide-1; animation-range-start: 30cqw;">Perfect for urban <em>riders</em></p>
-				</div>
-				<div>
-					<span class="block overflow-clip"><span class="block uppercase font-medium tracking-widest mb-4 animate-text-up" style="animation-timeline: --slide-2; animation-range-start: 30cqw;">Smart bottle</span></span>
-					<p class="pb-7 font-serif text-8xl animate-text translate-y-[205%] skew-y-6" style="animation-timeline: --slide-2; animation-range-start: 30cqw;">We're all <em>connected</em></p>
-				</div>
-				<div>
-					<span class="block overflow-clip"><span class="block uppercase font-medium tracking-widest mb-4 animate-text-up" style="animation-timeline: --slide-3; animation-range-start: 30cqw;">Reflective Helmet</span></span>
-					<p class="pb-7 font-serif text-8xl animate-text translate-y-[205%] skew-y-6" style="animation-timeline: --slide-3; animation-range-start: 30cqw;">Ready for <em>late nights</em></p>
-				</div>
+			<div class="supports-sda:hidden px-7 pb-7">
+				Your browser does not support scroll-driven animations. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations">MDN</a> for browser compatibility tables.
 			</div>
-			<a href="" class="max-lg:hidden absolute z-50 bottom-7 right-7 pointer-events-auto">Previous Demo</a>
 		</div>
-	</div>
+		<!--script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script-->
+	</body>
 </html>

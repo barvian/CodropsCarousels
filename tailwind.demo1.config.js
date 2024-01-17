@@ -11,6 +11,9 @@ export default {
       },
       letterSpacing: {
         widest: '0.3em'
+      },
+      supports: {
+        sda: 'timeline-scope: none'
       }
     }
   },

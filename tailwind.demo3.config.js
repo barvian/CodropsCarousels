@@ -11,7 +11,11 @@ export default {
       },
       backgroundImage: {
         noise: 'url("/img/3/noise.png")'
+      },
+      supports: {
+        sda: 'timeline-scope: none'
       }
+
     }
   },
   plugins: [
