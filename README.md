@@ -2,7 +2,7 @@
 
 Highly-experimental CSS-only carousel variations that use the new [scroll-driven animation properties](https://tympanus.net/codrops/2024/01/17/a-practical-introduction-to-scroll-driven-animations-with-css-scroll-and-view/).
 
-![Image Title](https://generative-placeholders.glitch.me/image?width=800&height=600")
+![Thumbnail](https://github.com/barvian/CodropsCarousels/assets/868352/3e29aaec-ae66-437d-9805-59c7a07b5958)
 
 [Article on Codrops](https://tympanus.net/codrops/?p=)
 
