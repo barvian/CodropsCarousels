@@ -2,7 +2,7 @@
 
 Highly-experimental CSS-only carousel variations that use the new [scroll-driven animation properties](https://tympanus.net/codrops/2024/01/17/a-practical-introduction-to-scroll-driven-animations-with-css-scroll-and-view/).
 
-![Image Title](https://generative-placeholders.glitch.me/image?width=800&height=600")
+![Thumbnail](https://github.com/barvian/CodropsCarousels/assets/868352/3e29aaec-ae66-437d-9805-59c7a07b5958)
 
 [Article on Codrops](https://tympanus.net/codrops/?p=)
 
@@ -37,9 +37,9 @@ npm run build
 
 ## Misc
 
-Follow Maxwell Barvian: [GitHub](https://github.com/barvian) 
+Follow Maxwell Barvian: [X](https://x.com/mbarvian), [GitHub](https://github.com/barvian) 
 
-Follow Codrops: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/codrops), [GitHub](https://github.com/codrops), [Instagram](https://www.instagram.com/codropsss/)
+Follow Codrops: [X](http://x.com/codrops), [Facebook](http://www.facebook.com/codrops), [GitHub](https://github.com/codrops), [Instagram](https://www.instagram.com/codropsss/)
 
 ## License
 [MIT](LICENSE)
